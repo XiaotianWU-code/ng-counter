@@ -14,4 +14,8 @@ export class CouterComponent implements OnInit {
   increase(): void {
     this.count++;
   }
+
+  decrease(): void{
+    this.count--;
+  }
 }

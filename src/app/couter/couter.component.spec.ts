@@ -37,4 +37,21 @@ describe('CouterComponent', () => {
 
   });
 
+  it('should minus 1 when click minus button', () => {
+
+    // given
+    component.count = 1;
+    const minusBtn = fixture.nativeElement.querySelector('[data-test="minusButton"]');
+
+    // when
+    minusBtn.click();
+    fixture.detectChanges();
+
+    // then
+    const displayCount = fixture.nativeElement.querySelector('[data-test="displayCount"]')
+    expect(component.count).toBe(0);
+    expect(displayCount.textContent).toEqual('number: 0');
+  });
+
+
 });
