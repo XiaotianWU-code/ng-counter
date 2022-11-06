@@ -1,0 +1,15 @@
+<nz-layout>
+  <nz-header>group-counter works!</nz-header>
+  <nz-content
+    ><button (click)="doCreateCounter()" nz-button nzType="primary">
+      Create counter
+    </button>
+    <app-couter
+      *ngFor="let item of counters; let i = index"
+      [counter]="item"
+      (newCount)="addNewCount($event, i)"
+    ></app-couter
+  ></nz-content>
+
+  <nz-footer>SUM: {{ sumCounters() }}</nz-footer>
+</nz-layout>

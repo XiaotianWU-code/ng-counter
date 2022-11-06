@@ -1,4 +1,5 @@
 <p>couter works!</p>
-<button data-test="plusButton" (click)="increase()">add</button>
-<span data-test="displayCount">number: {{count}}</span>
-<button data-test="minusButton" (click)="decrease()">minus</button>
+<button data-test="plusButton" *ngIf="isLessThanTen()" (click)="increase()" nz-button nzType="primary">add</button>
+<span data-test="displayCount" [ngClass]="{'number-text': !isLargerOrEqualThanZore(), 'number-red': !isLessThanTen()}">number: {{count}}</span>
+<button data-test="minusButton" *ngIf="isLargerOrEqualThanZore()"  (click)="decrease()" nz-button nzType="primary">minus</button>
+<button data-test="resetButton" (click)="reset()" nz-button nzType="primary">reset</button>
