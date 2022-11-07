@@ -1,8 +1,8 @@
 {
-  "editor.formatOnPaste": true, // required
-  "editor.formatOnType": true, // required
-  "editor.formatOnSave": false, // optional
-  "editor.formatOnSaveMode": "file", // required to format on save
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "files.autoSave": "onFocusChange",
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
